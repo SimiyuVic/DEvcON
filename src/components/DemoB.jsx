@@ -7,7 +7,7 @@ class DemoB extends Component {
         this.state = {
             name: "Victor Charles"
         }
-        console.log("Constructor has been exectuted in Demo B!")
+        console.log("Constructor has been executed in Demo B!")
     }
 
     static getDerivedStateFromProps(props, state)
@@ -19,6 +19,22 @@ class DemoB extends Component {
     componentDidMount()
     {
         console.log("componentDidMount has been executed in Demo B!")
+    }
+
+    shouldComponentUpdate()
+    {
+        console.log("shouldComponentUpdate in Demo B");
+        return true;
+    }
+
+    getSnapshotBeforeUpdate()
+    {
+        console.log("Demo B getSnapshotBeforeUpdate");
+        return null;
+    }
+    componentDidUpdate()
+    {
+        console.log("Demo B componentDidUpdate");
     }
 
     render() {
